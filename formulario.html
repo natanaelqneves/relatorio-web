@@ -11,74 +11,40 @@
     <main>
         <div class="titulo">Formulário de Relatorio</div>
         <a href="./index.html">Inicio</a>
-        <form action="http://localhost:8080/" method="POST" enctype="application/x-www-form-urlencoded">
-            <div class="subtitulo">Motorista, Turno e Data</div>
-            <div class="entrada">
-                <label for="fnome">Motorista:</label> 
-                <input type="text" id="fnome" name="nome">
-            </div>
+        <form action="http://localhost:8080/relatorio" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="subtitulo">Matricula e Data</div>
             <div class="entrada">
                 <label for="fmatricula">Matricula:</label>
-                <input type="text" id="fmatricula" name="matricula"><br>
+                <input type="text" id="fmatricula" name="matriculaMotorista"><br>
             </div>
             <div class="entrada">
                 <label for="fdata"> Data do Plantão:</label>
                 <input type="date" id="fdata" name="data" >
             </div>
-            <div class="entrada">
-                <label for="fturno">Turno:</label>
-                <input type="text" id="fturno" name="turno"><br>
-            </div>
             <hr><br>
-            <div class="subtitulo">Viatura, Cones e Abastecimento</div>
+            <div class="subtitulo">Viatura, Km Rodado</div>
             <div class="entrada">
                 <label for="fplaca">Placa:</label> 
-                <input type="text" id="fplaca" name="placa">
+                <select name="placaVeiculo" id="fplaca">
+                    <option value="ABC1234">ABC1234</option>
+                    <option value="ZXV4321">ZXV4321</option>
+                </select>
             </div>
             <div class="entrada">
-                <label for="fmodelo">Modelo:</label>
-                <input type="text" id="fmodelo" name="modelo"><br>
-            </div>
-            <div class="entrada">
-                <label for="ikm">Inicial KM:</label>
-                <input type="text" id="ikm" name="turno"><br>
-            </div>
-            <div class="entrada">
-                <label for="fmk">Final KM:</label>
-                <input type="text" id="fkm" name="finalkm"><br>
-            </div>
-            <div class="entrada">
-                <label for="ficones">Inicial Cones:</label>
-                <input type="text" id="ficones" name="inicialcones"><br>
-            </div>
-            <div class="entrada">
-                <label for="fcones">Final Cones:</label>
-                <input type="text" id="fcones" name="finalcones"><br>
-            </div>
-            <div class="entrada">
-                <label for="fabastecimento">Abascimento Efetuado:</label>
-                <input type="text" id="fabastecimento" name="abastecimento"><br>
-            </div>
-            <div class="entrada">
-                <label for="flitros">Total Litros:</label>
-                <input type="text" id="flitros" name="litros"><br>
-            </div>
-            <div class="entrada">
-                <label for="fvalorlitro">Valor por Litros</label>
-                <input type="text" id="fvalorlitro" name="valorlitro"><br>
+                <label for="fmk">Km Rodado:</label>
+                <input type="text" id="fkm" name="kmRodadoNoServico"><br>
             </div>
             <div class="subtitulo">Avarias e Alterações</div>
             <div class="entrada">
-                <label for="fnovasavarias">Novas Avarias:</label>
-                <input type="text" id="fnovasavarias" name="novasavarias"><br>
+                <label for="fnovasavarias">Avariado</label>
+                <select name="avariaNoServico" id="">
+                    <option value="false">False</option>
+                    <option value="true">True</option>
+                </select>
             </div>
             <div class="entrada">
                 <label for="fdetalheavaria">Detalhe Avaria:</label>
-                <input type="text" id="fdetalheavaria" name="detalheavaria"><br>
-            </div>
-            <div class="entrada">
-                <label for="frelatos">Relatos:</label>
-                <input class="relatos" type="text" id="frelatos" name="relatos"><br>
+                <input type="text" id="fdetalheavaria" name="detalheDaAvariaNoServico"><br>
             </div>
             <input class="botao" type="submit"value="Enviar">
           </form>
